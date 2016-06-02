@@ -1,0 +1,274 @@
+html,body{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+
+body{
+	background-image: url("../img/bg-tile.png");
+}
+
+.header-wrapper{
+    justify-content: space-between;
+}
+
+.header-logo{
+	width: 179px;
+	height: 52px;
+}
+
+.z-listcell.item-img{
+	width: 100px;
+}
+
+.z-listcell.item-img img{
+	width: 80%;
+}
+
+.z-listcell.item-qty{
+	width: 52px;
+}
+
+.z-listcell.item-price{
+	width: 72px;
+}
+
+.z-listcell.item-price span{
+    color: #F53;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+}
+
+.z-listcell.item-price span:before{
+    content: '$';
+}
+
+.z-listcell.item-name{
+	text-align: left;
+}
+
+.shopping-cart{
+	background-color: rgba(255, 255, 255, .5);
+	position: relative;
+	width: 39px;
+	height: 39px;
+	text-align: center;
+	line-height: 39px;
+	font-size: 26px;
+	color: #11a;
+}
+
+.shopping-cart>.count{
+	background-color: #ff7f00;
+	border-radius: 12px;
+	color: #FFF;
+	display: inline-block;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 18px;
+	height: 24px;
+	left: 9px;
+	line-height: 24px;
+	position: absolute;
+	top: 33px;
+	width: 24px;
+}
+
+.sub-menu-list{
+	height: 0;
+    width: 100%;
+    transition: height .5s;
+    overflow: hidden;
+}
+
+.shop-ad{
+    justify-content: center;
+}
+
+.ad-wrapper{
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(#888, #999 10%, #ccc 70%, #ddd 90%, #ccc);;
+}
+
+.ad{
+	width: 100%;
+	height: 100%;
+	max-width: 641px;
+	max-height: 206px;
+}
+
+.total{
+    text-align: right;
+    border-top: 3px solid #999;
+}
+
+.total>.label{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.total>.price{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #F53;
+}
+
+.total>.price:before{
+    content: '$';
+}
+
+.menu-wrapper{
+	background-color: #3f3f3f;
+	height:39px;
+}
+
+.menu-wrapper [class^="col-"], .menu-wrapper [class*=" col-"]{
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.menu-button{
+	display: inline-block;
+	width: 39px;
+	height: 39px;
+	background-color: rgba(255, 255, 255, .5);
+	margin: 0 1px;
+	line-height: 39px;
+	font-size: 20px;
+}
+
+.north, .z-north{
+	height: 62px;
+	background: url("../img/bg-header-tile.png") ;
+	background-repeat: repeat-x;
+	background-size: 100% 100%;
+	text-align:center;
+}
+
+.west a[class*="z-icon"]:before,
+.west a>[class*="z-icon"]:before,
+.z-west a[class*="z-icon"]:before,
+.z-west a>[class*="z-icon"]:before{
+    margin-right: 0.5em;
+}
+
+@media all and (min-width: 480px){
+	.header-logo{
+		width: 358px;
+		height: 103px;
+	}
+
+	.shopping-cart{
+		width: 78px;
+		height: 78px;
+		line-height: 78px;
+		font-size: 48px;
+	}
+
+	.shopping-cart>.count{
+		font-size: 20px;
+		width: 32px;
+		height: 32px;
+		border-radius: 16px;
+		left: 26px;
+		top: 72px;
+		line-height: 32px;
+	}
+
+	.north, .z-north{
+		height:125px;
+	}
+
+}
+
+.west{
+	background-color: #f8f8f8;
+	border-color: #e7e7e7;
+	border-width: 0 1px 0 0;
+	border-style: solid;
+	border-radius: 4px;
+	top: 0;
+	right: auto;
+	bottom: 0;
+	left: 0;
+	width: 300px;
+	height: auto;
+	position: fixed;
+	z-index: 1030;
+	overflow-y: auto;
+	transition: margin-left .5s;
+	margin-left: -300px;
+}
+
+.west.show{
+	margin-left: 0;
+	z-index: 101;
+}
+
+.center{
+	margin-bottom: 48px;
+}
+
+.south, .z-south{
+	background-color:#ccc;
+	height:53px;
+	position: fixed;
+	right: 0;
+	left: 0;
+	bottom:0;
+	z-index: 1030;
+	border-top: 10px solid #aaa;
+	align-items: center;
+}
+
+.south .row, .z-south .row{
+	justify-content: space-around;
+}
+
+.south .footer-img, .z-south .footer-img{
+	width: 58px;
+	height: 48px;
+}
+
+.south .footer-link, .z-south .footer-link{
+	display: inline-block;
+	font-size: .8rem;
+	color: #333;
+	text-decoration: none;
+	font-weight: bold;
+	align-self: center;
+}
+
+#menu-bg {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 100;
+}
+
+.z-north, .z-west, .z-center{
+    background-color: transparent;
+}
+
+.z-north-body, .z-west-body, .z-center-body, .z-south-body{
+    padding-left: .9376rem;
+    padding-right: .9376rem;
+}
+
+.z-borderlayout{
+    background-color: transparent;
+}
+
+.z-listcell{
+	text-align: center;
+}
+
+.z-listcell-content{
+	font-size: 1.1rem;
+}

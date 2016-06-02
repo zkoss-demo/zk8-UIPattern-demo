@@ -1,0 +1,8 @@
+<zk>
+    <div sclass="row header-wrapper">
+        <image src="img/header-logo.png" sclass="header-logo pull-left"/>
+        <span sclass="shopping-cart pull-right" zclass="z-icon-shopping-cart">
+            <label sclass="count" value="@load(vm.shopItemsCount)"/>
+        </span>
+    </div>
+</zk>

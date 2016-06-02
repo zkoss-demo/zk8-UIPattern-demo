@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?page title="ZK-Awesome-Shop"?>
+<?meta name="viewport" content="width=device-width, initial-scale=1"?>
+<?link rel="stylesheet" href="css/bootstrap-custom.css"?>
+<?link rel="stylesheet" href="css/demo.css"?>
+<?script src="script/demo.js"?>
+<zk>
+    <div viewModel="@id('vm') @init('org.zkoss.ShoppingCartVM')" width="100%" height="100%">
+        <apply template="@load(vm.layoutTemplate)"/>
+    </div>
+    <template name="mobile_layout">
+        <div sclass="container-fluid">
+            <div id="north" sclass="north row">
+                <div id="north_content" sclass="col-xs-12 ">
+                    <apply templateURI="includes/header.zul"/>
+                </div>
+            </div>
+            <div id="west" sclass="west row">
+                <div id="west_content" sclass="col-xs-12">
+                    <apply templateURI="includes/menu.zul"/>
+                </div>
+            </div>
+            <div id="center" sclass="center row">
+                <div id="center-content" sclass="col-xs-12">
+                    <apply templateURI="includes/shoplist.zul"/>
+                </div>
+            </div>
+            <div id="south" sclass="south row">
+                <div id="south-content" sclass="col-xs-12">
+                    <apply templateURI="includes/footer.zul"/>
+                </div>
+            </div>
+        </div>
+    </template>
+    <template name="desktop_layout">
+        <borderlayout>
+            <north>
+                <apply templateURI="includes/header.zul"/>
+            </north>
+            <west width="160px">
+                <apply templateURI="includes/menu.zul"/>
+            </west>
+            <center autoscroll="true">
+                <apply templateURI="includes/shoplist.zul"/>
+            </center>
+            <south>
+                <apply templateURI="includes/footer.zul"/>
+            </south>
+        </borderlayout>
+    </template>
+</zk>

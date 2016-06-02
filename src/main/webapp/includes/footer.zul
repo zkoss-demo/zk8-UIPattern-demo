@@ -1,0 +1,11 @@
+<zk>
+    <div sclass="row m-x-0">
+        <image sclass="footer-img" src="img/zk-innershadow.png"/>
+        <a href="#" sclass="footer-link">Product</a>
+        <a href="#" sclass="footer-link">Demos</a>
+        <a href="#" sclass="footer-link">Downloads</a>
+        <a href="#" sclass="footer-link">Support</a>
+        <a href="#" sclass="footer-link">…</a>
+    </div>
+
+</zk>

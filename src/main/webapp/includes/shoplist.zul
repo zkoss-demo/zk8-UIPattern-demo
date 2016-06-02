@@ -1,0 +1,45 @@
+<zk>
+    <div>
+        <div sclass="row shop-ad">
+            <div sclass="ad-wrapper">
+                <image src="img/ad.png" sclass="ad"/>
+            </div>
+
+            <a>USE CREDIT CARD, GET EXTRA 5% OFF!!</a>
+        </div>
+        <div sclass="row row-xs-center menu-wrapper">
+            <div id="menu" sclass="col-xs-12 text-xs-center">
+                <span sclass="pull-left menu-button more" zclass="z-icon-bars"/>
+                <span sclass="pull-left menu-button" zclass="z-icon-check-square-o"/>
+                <span sclass="pull-right menu-button" zclass="z-icon-sort"/>
+            </div>
+        </div>
+        <div sclass="row">
+            <div id="shopcartList" sclass="col-xs-12 p-a-0">
+                <listbox model="@load(vm.shopItems)">
+                    <template name="model">
+                        <listitem>
+                            <listcell sclass="item-img"><image src="@load(each.imageUrl)"/></listcell>
+                            <listcell sclass="item-name" label="@load(each.name)"/>
+                            <listcell sclass="item-qty">
+                                <selectbox model="@load(each.stockList)" selectedIndex="@load(each.quantity)">
+                                    <template name="model">${each}</template>
+                                </selectbox>
+                            </listcell>
+                            <listcell sclass="item-price">
+                                <label value='@load(each.price)'/>
+                            </listcell>
+                        </listitem>
+                    </template>
+                </listbox>
+            </div>
+        </div>
+        <div sclass="row">
+            <div sclass="col-xs-12 total m-y-1 p-t-1">
+                <label sclass="label">Total : </label>
+                <label sclass="price" value="@load(vm.totalPrice)"/>
+            </div>
+        </div>
+        <button zclass="btn" sclass="btn-block btn-warning m-y-1">Checkout &gt;&gt;</button>
+    </div>
+</zk>
